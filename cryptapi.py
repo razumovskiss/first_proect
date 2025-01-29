@@ -1,15 +1,9 @@
-import telebot  # ask - BotName
-from requests import Response
+import telebot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
-from settings import settings  # на сколько я помню, из этого файла я доставал апи токен к боту
 import requests
 
 
-bot = telebot.TeleBot(settings['token'])
-
-
-# bot.send_message(message.chat.id, get_ticker(coin1=message.text))
-# попытаюсь еще сделать так, чтобы бот мог выводить и без кнопок валюту
+bot = telebot.TeleBot('token')
 
 
 def get_ticker(coin1="btc", coin2="usd"):
